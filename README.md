@@ -3,17 +3,17 @@ Changes layout on custom hotkey.
 
 ## Why?
 Xorg xserver have an [issue](https://gitlab.freedesktop.org/xorg/xserver/-/issues/258).
-In short: if you set hotkey for layout switch to ctrl+shift another hotkeys like ctrl+shift+* 
-will not work. It's really annoying when you have used ctrl+shift for a lot of years on windows
+In short: if you set hotkey for layout switch to `ctrl+shift` another hotkeys like `ctrl+shift+*` 
+will not work. It's really annoying when you have used `ctrl+shift` for a lot of years on windows
 and now need to change it to something else.
 
 ## Usage
 
 ### Warning
-You need root access to run this program because python package `keyboard` need it.
-If someone knows better package to monitor keyboard events on system running Wayland,
+You need root access to run this program because python package [keyboard](https://github.com/boppreh/keyboard) need it.
+If someone knows better package to monitor keyboard events on **system running Wayland**,
 please, open an issue to notify me.
-__I tried to use `pynput` but it is not working.__
+_I tried to use [pynput](https://pynput.readthedocs.io/en/latest/keyboard.html#monitoring-the-keyboard) but it is not working._
 
 ### Installation
 
@@ -50,8 +50,10 @@ sudo pgrep -au root | grep layout_switcher
 ```
 
 Above command will give you string like this:
-`32481 python ./layout_switcher.py ctrl+shift`
-Where `32481` is PID that you need.
+```bash
+32481 python ./layout_switcher.py ctrl+shift
+```
+Where `32481` is `PID`.
 
 Then run another command replacing `PID` with one you get:
 ```bash
